@@ -1,7 +1,7 @@
 
 PymarMongo
 =====
-Pymar addition to easily use map-reduce operations with MongoDB collections.
+Pymar addition to easily scale your operations with MongoDB collections.
 
 
 Requirements:

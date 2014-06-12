@@ -13,9 +13,9 @@ from distutils.core import setup
 
 setup(
     name='PymarMongo',
-    version="0.1",
-    description="Pymar addition to easily use map-reduce operations with MongoDB collections.",
-    url="",
+    version="0.1.1",
+    description="Pymar addition to easily scale your operations with MongoDB collections.",
+    url="https://github.com/alexgorin/PymarMongo",
     author="Alexander Gorin",
     author_email='saniagorin@gmail.com',
     license='MIT',
@@ -26,5 +26,8 @@ setup(
     install_requires=[
           'pymar',
           'pymongo'
+    ],
+    keywords=[
+        'python', 'scale', 'distribute', 'map', 'reduce', 'mongo'
     ]
 )
