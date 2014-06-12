@@ -103,7 +103,7 @@ def remove_database():
 if __name__ == "__main__":
     """
     Before starting this script launch corresponding workers:
-    worker.py -f ../pymarMongo/examples/words_count.py -s SimpleMongoSource -p WordsCountProducer -q 127.0.0.1 -w 4
+    worker.py ./pymarMongo/examples/words_count.py -s SimpleMongoSource -p WordsCountProducer -q 127.0.0.1 -w 4
     """
     init_database()
 
