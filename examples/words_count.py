@@ -54,7 +54,7 @@ class SimpleMongoSource(MongoDataSource):
 
 
 def init_database():
-    print "Initialize collection."
+    print("Initialize collection.")
 
     client = MongoClient(SimpleMongoSource.CONF["ip"], SimpleMongoSource.CONF["port"])
     db = client[SimpleMongoSource.CONF["db"]]
@@ -90,15 +90,15 @@ def init_database():
 
     data.insert(books)
     client.close()
-    print "Collection initialized."
+    print("Collection initialized.")
 
 
 def remove_database():
-    print "Remove database"
+    print("Remove database")
     client = MongoClient(SimpleMongoSource.CONF["ip"], SimpleMongoSource.CONF["port"])
     db = client[SimpleMongoSource.CONF["db"]]
     db.drop_collection(SimpleMongoSource.CONF["collection"])
-    print "Database removed."
+    print("Database removed.")
 
 if __name__ == "__main__":
     """
@@ -111,8 +111,8 @@ if __name__ == "__main__":
     factory = DataSourceFactory(SimpleMongoSource)
     value = producer.map(factory)
 
-    print "\nAnswer: "
+    print("\nAnswer: ")
     for word, count in value.most_common(6):
-        print "\t%-5s : %s" % (word, count)
+        print("\t%-5s : %s" % (word, count))
 
     remove_database()
